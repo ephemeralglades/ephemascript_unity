@@ -1,0 +1,73 @@
+﻿@var interacted false
+@var grantedItem false
+@if var interacted true
+
+	A Test NPC\ I already talked to you...
+
+	@if var grantedItem true
+
+		I hope you like your item!
+
+	@else
+
+		You didn't even take my item..
+
+	@endif
+
+	@end
+
+@endif
+
+A Test NPC\ Why hello there!
+
+I'm going to talk to you for a while now.
+
+日本語でも
+
+It makes it easy to write if it's just text and newlines.
+
+so...
+
+How are you?
+Good\GOOD
+Not Good\NOTGOOD
+
+@GOOD:
+Great!
+
+@goto AFTERQ
+
+@NOTGOOD:
+Oh... That sucks
+
+@AFTERQ:
+Cool!
+
+Hey..
+
+Would you like an item?
+yes\YESITEM
+no\NOITEM
+
+@YESITEM:
+@GrantItem Potion 5
+
+@setvar grantedItem true
+
+Here you go!
+
+@goto END
+
+@NOITEM:
+Oh.. Okay then.
+
+@END:
+@PlayState Deep
+
+Now i'm out of the deep conversation state.
+
+see you!
+
+@setvar interacted true
+
+@end

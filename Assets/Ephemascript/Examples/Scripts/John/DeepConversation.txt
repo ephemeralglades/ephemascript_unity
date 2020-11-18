@@ -1,0 +1,23 @@
+An NPC\ Well!
+
+This is in fact a conversation that is in a different text file.
+
+And therefore a different state.
+
+So you can nest conversations into eachother.
+
+That's pretty cool
+
+you can also access vars with ExtVar, etc.
+
+You can also end the whole conversation depending on which type of @end you use.
+
+Do you want to end the conversation?
+Yup\ENDCONV
+No\DONTENDCONV
+
+@ENDCONV:
+@end all
+
+@DONTENDCONV:
+@end
